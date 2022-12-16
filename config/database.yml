@@ -1,0 +1,25 @@
+
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: "#Spring2016"
+  host: localhost
+ 
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: ABauth
+
+  test:
+  <<: *default
+  database: scafold_test
+
+#
+production:
+  <<: *default
+  database: scafold_production
+  username: postgres
+  password: <%= ENV["ADDRESSBOOK_DATABASE_PASSWORD"] %>
