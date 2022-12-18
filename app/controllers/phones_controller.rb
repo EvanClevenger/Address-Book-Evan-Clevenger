@@ -1,6 +1,8 @@
 class PhonesController < ApplicationController
   before_action :set_phone, only: %i[ show edit update destroy ]
 
+  
+
   # GET /phones or /phones.json
   def index
     @phones = Phone.all

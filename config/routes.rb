@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :emails
   resources :addresses
   resources :people
+  
   root 'welcome#index'
 
   get 'sign_up', to: 'registrations#new'

@@ -1,6 +1,8 @@
 class PeopleController < ApplicationController
   before_action :set_person, only: %i[ show edit update destroy ]
 
+  
+
   # GET /people or /people.json
   def index
     @people = Person.all
@@ -13,6 +15,7 @@ class PeopleController < ApplicationController
   # GET /people/new
   def new
     @person = Person.new
+    
   end
 
   # GET /people/1/edit
@@ -65,6 +68,6 @@ class PeopleController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def person_params
-      params.require(:person).permit(:suffix, :first_name, :last_name, :birtday, :comment)
+      params.require(:person).permit(:suffix, :first_name, :last_name, :birtday, :comment, address_attributes: [:street, :city])
     end
 end
