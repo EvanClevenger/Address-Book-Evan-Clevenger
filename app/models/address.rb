@@ -1,5 +1,5 @@
 class Address < ApplicationRecord
-  belongs_to :people, inverse_of: :address
+  belongs_to :people
 
   validates :street, presence: true
   validates :city, presence: true

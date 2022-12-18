@@ -1,14 +1,23 @@
-<p style="color: green"><%= notice %></p>
+<div class ="card" style="width: 18rem;">
+  <div class="card-body">
+  
+    <p style="color: green"><%= notice %></p>
 
-<h1>People</h1>
+    <h1>People</h1>
 
-<div id="people">
-  <% @people.each do |person| %>
-    <%= render person %>
-    <p>
-      <%= link_to "Show this person", person %>
-    </p>
-  <% end %>
-</div>
+    <div id="people">
+      <% @people.each do |person| %>
+        <%= render person %>
+        <p>
+          <%= link_to "Show this person", person %>
+        </p>
+        <%= link_to "New person", new_person_path %>
+      <% end %>
+    </div>
 
-<%= link_to "New person", new_person_path %>
+     
+   </div> 
+    
+  </div>
+
+ 
