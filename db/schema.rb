@@ -1,6 +1,5 @@
 
-
-ActiveRecord::Schema[7.0].define(version: 2022_12_18_000904) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_18_185652) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +22,33 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_18_000904) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["people_id"], name: "index_emails_on_people_id"
+  end
+
+  create_table "freinds", force: :cascade do |t|
+    t.string "suffix"
+    t.string "first_name"
+    t.string "last_name"
+    t.date "birtday"
+    t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fullapplications", force: :cascade do |t|
+    t.string "suffix"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "SSN"
+    t.date "birthday"
+    t.string "street_address"
+    t.string "town"
+    t.string "zip_code"
+    t.string "state"
+    t.string "country"
+    t.string "email"
+    t.string "phone_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "people", force: :cascade do |t|

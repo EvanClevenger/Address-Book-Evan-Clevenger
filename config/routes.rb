@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :fullapplications
   resources :phones
   resources :emails
   resources :addresses

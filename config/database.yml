@@ -6,20 +6,40 @@ default: &default
   username: postgres
   password: "#Spring2016"
   host: localhost
+  database: AddressApp
  
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: ABauth
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: "#Spring2016"
+  host: localhost
+  database: AddressApp
+ 
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
   test:
   <<: *default
-  database: ABauth
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: "#Spring2016"
+  host: localhost
+  database: AddressApp
+ 
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 #
 production:
   <<: *default
-  database: scafold_production
+  adapter: postgresql
+  encoding: unicode
   username: postgres
-  password: <%= ENV["ADDRESSBOOK_DATABASE_PASSWORD"] %>
+  password: "#Spring2016"
+  host: localhost
+  database: AddressApp
+ 
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>

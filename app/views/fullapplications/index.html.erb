@@ -1,0 +1,17 @@
+
+
+    <p style="color: green"><%= notice %></p>
+
+    
+
+    <div id="fullapplications">
+      <% @fullapplications.each do |fullapplication| %>
+        <%= render fullapplication %>
+        <p>
+          <%= link_to "Show or Edit this Address", fullapplication %>
+        </p>
+      <% end %>
+    </div>
+
+    
+  
